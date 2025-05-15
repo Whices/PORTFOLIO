@@ -1,13 +1,45 @@
 :root {
-   --background: #20262c;
-   --text: #fef9c3;
+   --background: #ffffff;
+   --text: #ffffff;
    --rouge: #710000;
    --gris: #272932;
    --gris_fade: #27293281;
    --rouge_fade: #ff0000ba;
-   --jaune_fade: #fdf5008d;
+   --jaune_fade: #fde800fc;
    --jaune: #FDF500;
+   --shadow: #00000040;
 }
+
+/*
+#####################################################
+#                                                   #
+#                      Polices                      #
+#                                                   #
+#####################################################
+*/
+
+@font-face {
+   font-family: 'BlenderPro';
+   src: url('../FONT/BlenderPro-Book.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: 'BlenderProBold';
+   src: url('../FONT/BlenderPro-Book.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+body {
+   font-family: "BlenderPro", sans-serif;
+   background-color: #e6e1d3;
+   color: #03196c;
+   margin: 0;
+}
+
 
 /*###################################################
 #                                                   #
@@ -42,16 +74,18 @@ ul {
    padding-inline-start: 40px;
    unicode-bidi: isolate;
 }
+
 /*LIST*/
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    unicode-bidi: isolate;
+   display: list-item;
+   text-align: -webkit-match-parent;
+   unicode-bidi: isolate;
+   font-size: 15px;
 }
 
 .menu-list {
    align-items: center;
-   background: var(--rouge_fade);
+   background: var(--jaune_fade);
    display: flex;
    height: 48px;
    list-style: none;
@@ -65,7 +99,7 @@ li {
    cursor: pointer;
    display: flex;
 
-   font-size: 12px;
+   font-size: 17px;
    font-style: normal;
    font-weight: 400;
    height: 100%;
@@ -73,16 +107,23 @@ li {
    padding: 0 25px;
    position: relative;
    text-transform: uppercase;
+
+}
+
+.menu-item:hover{
+   border-right: 3px solid var(--gris_fade);
 }
 
 .menu {
    background-color: var(--gris_fade);
    display: flex;
    position: sticky;
-   border: 2px solid var(--jaune);
+   border: 3px solid var(--rouge_fade);
    clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
    margin-top: 36px;
    position: relative;
+
+
 
 }
 
@@ -90,12 +131,13 @@ li {
    display: none;
    -webkit-backdrop-filter: blur(8px);
    backdrop-filter: blur(8px);
-   background: #0009;
-   border: 1px solid #00f0ff;
-   border-top: 8px solid #00f0ff;
-   box-shadow: 0 1px 3px #00000040, 0 2px 16px #00000040;
+   background: var(--jaune_fade);
+   border: 2px solid var(--rouge_fade);
+   border-top: 8px solid var(--rouge_fade);
+
+   box-shadow: 0 1px 3px var(--shadow), 0 2px 16px var(--shadow);
    clip-path: inset(0 -16px -16px -16px);
-   display: none;
+
    flex-direction: column;
    left: 0;
    list-style: none;
@@ -105,6 +147,21 @@ li {
    padding: 10px 0;
    position: absolute;
    top: calc(100% - 4px);
+   text-transform: initial;
+
+
+}
+
+.menu-sub-list>li:hover {
+   color: red;
+}
+
+.text-cv:hover .list-cv,
+.text-proj:hover .list-proj,
+.text-perso:hover .list-perso{
+   display: flex;
+   align-items: center;
+   
 }
 
 .menu-sub-list li {
@@ -113,13 +170,25 @@ li {
    color: #fff;
    display: flex;
    height: 44px;
-   padding-right: 24px;
+
+}
+.menu-sub-list > li:hover {
+   background-color: var(--rouge_fade);
+   width: 100%;
+   display: flex;
+   align-content: center;
 }
 
 *,
 :after,
 :before {
    box-sizing: inherit;
+   text-decoration: none;
+   color: var(--rouge_fade);
+   font-family: 'BlenderProBold', sans-serif;
+   text-shadow: 1px 1px 3px var(--shadow);
+
+
 }
 
 
@@ -136,7 +205,6 @@ li {
    background: linear-gradient(180deg, #000000a6, #0000);
    content: "";
    display: block;
-   height: 112px;
    left: 0;
    opacity: 0;
    pointer-events: none;
@@ -150,29 +218,32 @@ li {
 header {
    padding: 10px;
    margin-bottom: 30px;
-   height: 90px;
    width: 100%;
    margin-left: 1000;
    align-items: center;
    justify-content: space-between;
+   position: fixed;
+   top:0;
 
 }
 
 .header {
-
    width: 100%;
    height: 50px;
-
    margin-top: 30px;
    align-items: center;
    justify-content: space-between;
    margin: 0;
+
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   width: 100%;
+   display: sticky;
 }
 
-.header {
-   position: relative;
-   width: 100%;
-}
+
 
 .header-top {
    align-items: self-start;
@@ -185,6 +256,20 @@ header {
    top: 0;
    z-index: 10
 }
+
+/*###################################################
+#                                                   #
+#                      MAIN                         #
+#                                                   #
+###################################################*/
+
+main {
+   background-color: var(--background);
+   height: 1000px;
+}
+
+
+
 
 /*###################################################
 #                                                   #
