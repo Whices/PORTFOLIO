@@ -1,11 +1,13 @@
 :root {
    --background: url("../Picture/BackGround/BG_1.jpg");
-   --text: #ffffff;
+   --font:  url('../FONT/BlenderPro-Book.woff') format('woff');
+   --text: #FF4A57;
    --rouge: #710000;
    --gris: #272932;
    --gris_fade: #27293281;
-   --rouge_fade: #ff0000ba;
-   --jaune_fade: #fde800fc;
+   --rouge_fade: #FF4A57;
+   --noire_fade: #000000c2;
+   --noire_fade_lg: #0000003a;
    --jaune: #FDF500;
    --shadow: #00000040;
 }
@@ -43,11 +45,11 @@
 
 
 body {
-   font-family: "BlenderPro", sans-serif;
+   font-family: var(--font);
    color: var(--text);
    margin: 0;
    box-sizing: border-box;
-   word-break: break-word
+   word-break: break-word; 
 }
 
 
@@ -58,6 +60,7 @@ body {
 #                                                   #
 ###################################################*/
 /*PARENT LISTE*/
+
 ul {
    display: block;
    list-style-type: disc;
@@ -67,6 +70,8 @@ ul {
    margin-inline-end: 0px;
    padding-inline-start: 40px;
    unicode-bidi: isolate;
+   
+
 }
 
 /*LIST*/
@@ -75,21 +80,24 @@ li {
    text-align: -webkit-match-parent;
    unicode-bidi: isolate;
    font-size: 15px;
+   
+
 }
 
 .menu-list {
    align-items: center;
-   background: var(--jaune_fade);
+   background: var(--noire_fade);
    display: flex;
    height: 48px;
    list-style: none;
    margin: 0;
    padding: 0 0 0 24px;
+     
 }
 
 .menu-item {
    align-items: center;
-   color: #fff;
+   color: var(--rouge_fade);
    cursor: pointer;
    display: flex;
 
@@ -101,11 +109,9 @@ li {
    padding: 0 25px;
    position: relative;
    text-transform: uppercase;
+   text-decoration: none;
+   
 
-}
-
-.menu-item:hover{
-   border-right: 3px solid var(--gris_fade);
 }
 
 .menu {
@@ -116,16 +122,13 @@ li {
    clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
    margin-top: 36px;
    position: relative;
-
-
-
 }
 
 .menu-sub-list {
    display: none;
    -webkit-backdrop-filter: blur(8px);
    backdrop-filter: blur(8px);
-   background: var(--jaune_fade);
+   background: var(--noire_fade);
    border: 2px solid var(--rouge_fade);
    border-top: 8px solid var(--rouge_fade);
 
@@ -146,8 +149,8 @@ li {
 
 }
 
-.menu-sub-list>li:hover {
-   color: red;
+.list-cv > li:hover {
+   text-decoration: none;
 }
 
 .text-cv:hover .list-cv,
@@ -173,17 +176,17 @@ li {
    align-content: center;
 }
 
-*,
+/* *,
 :after,
 :before {
    box-sizing: inherit;
-   text-decoration: none;
+   
    color: var(--rouge_fade);
    font-family: 'BlenderProBold', sans-serif;
    text-shadow: 1px 1px 3px var(--shadow);
 
 
-}
+} */
 
 
 /*###################################################
@@ -193,6 +196,12 @@ li {
 ###################################################*/
 .header-top>* {
    pointer-events: auto;
+}
+
+.header > .header-top > div > h1{
+   margin-top: 7%;
+   color: var(--text);
+   text-shadow: 2px 2px 0px black;
 }
 
 .header-top:before {
@@ -218,12 +227,13 @@ header {
    justify-content: space-between;
    position: fixed;
    top:0;
+   
+
 
 }
 
 .header {
    width: 100%;
-   height: 50px;
    margin-top: 30px;
    align-items: center;
    justify-content: space-between;
@@ -261,8 +271,21 @@ main {
    background-image: url("../Picture/BackGround/BG_1.jpg");
    background-size: 100%;
    background-repeat: no-repeat;
-   height: 1000px;
+   background-color: var(--jaune);
+   height: 1024px;
 }
+
+main  > section{
+   background-color: var(--noire_fade_lg);
+   border: 3px solid var(--rouge_fade);
+   height: 1024px;
+   width: 100%;
+   margin: 0;
+}
+
+main > section > article {
+}
+
 
 
 
@@ -272,3 +295,13 @@ main {
 #                      FOOTER                       #
 #                                                   #
 ###################################################*/
+
+footer > section{
+   background-color: var(--noire_fade_lg);
+   border: 3px solid var(--rouge_fade);
+   height: 300px;
+   width: 100%;
+   margin: 0;
+   background-color: var(--jaune);
+
+}
