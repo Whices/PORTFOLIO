@@ -1,5 +1,5 @@
 :root {
-   --background: #ffffff;
+   --background: url("../Picture/BackGround/BG_1.jpg");
    --text: #ffffff;
    --rouge: #710000;
    --gris: #272932;
@@ -33,23 +33,17 @@
    font-display: swap;
 }
 
-body {
-   font-family: "BlenderPro", sans-serif;
-   background-color: #e6e1d3;
-   color: #03196c;
-   margin: 0;
-}
 
 
 /*###################################################
 #                                                   #
-#                      MENU                         #
+#                      BODY                         #
 #                                                   #
 ###################################################*/
 
 
 body {
-   background-color: var(--background);
+   font-family: "BlenderPro", sans-serif;
    color: var(--text);
    margin: 0;
    box-sizing: border-box;
@@ -264,7 +258,9 @@ header {
 ###################################################*/
 
 main {
-   background-color: var(--background);
+   background-image: url("../Picture/BackGround/BG_1.jpg");
+   background-size: 100%;
+   background-repeat: no-repeat;
    height: 1000px;
 }
 
