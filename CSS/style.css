@@ -1,6 +1,6 @@
 :root {
    --background: url("../Picture/BackGround/BG_1.jpg");
-   --font:  url('../FONT/BlenderPro-Book.woff') format('woff');
+   --font: url('../FONT/BlenderPro-Book.woff') format('woff');
    --text: #FF4A57;
    --rouge: #710000;
    --gris: #272932;
@@ -27,6 +27,7 @@
    font-style: normal;
    font-display: swap;
 }
+
 @font-face {
    font-family: 'BlenderProBold';
    src: url('../FONT/BlenderPro-Book.woff') format('woff');
@@ -45,11 +46,12 @@
 
 
 body {
-   font-family: var(--font);
+   font-family: 'BlenderProBold', sans-serif;
+   text-align: justify;
    color: var(--text);
    margin: 0;
    box-sizing: border-box;
-   word-break: break-word; 
+   word-break: break-word;
 }
 
 
@@ -70,18 +72,21 @@ ul {
    margin-inline-end: 0px;
    padding-inline-start: 40px;
    unicode-bidi: isolate;
-   
+   color: var(--text);
 
+}
+
+a {
+   color: var(--text);
 }
 
 /*LIST*/
 li {
    display: list-item;
-   text-align: -webkit-match-parent;
    unicode-bidi: isolate;
    font-size: 15px;
-   
-
+   justify-content: center;
+   color: var(--text);
 }
 
 .menu-list {
@@ -92,7 +97,7 @@ li {
    list-style: none;
    margin: 0;
    padding: 0 0 0 24px;
-     
+
 }
 
 .menu-item {
@@ -110,7 +115,7 @@ li {
    position: relative;
    text-transform: uppercase;
    text-decoration: none;
-   
+
 
 }
 
@@ -149,16 +154,32 @@ li {
 
 }
 
-.list-cv > li:hover {
+.list-proj>li a:hover,
+.list-perso>li a:hover {
+   text-align: justify;
+   text-decoration: none;
+   color: var(--jaune);
+}
+
+.list-proj>li a,
+.list-perso>li a {
+   text-decoration: none;
+   text-align: justify;
+   color: var(--text);
+}
+
+.list-cv>li a {
+   text-align: center;
+   color: var(--text);
    text-decoration: none;
 }
 
 .text-cv:hover .list-cv,
 .text-proj:hover .list-proj,
-.text-perso:hover .list-perso{
+.text-perso:hover .list-perso {
    display: flex;
    align-items: center;
-   
+
 }
 
 .menu-sub-list li {
@@ -169,8 +190,9 @@ li {
    height: 44px;
 
 }
-.menu-sub-list > li:hover {
-   background-color: var(--rouge_fade);
+
+.menu-sub-list>li:hover {
+   /* background-color: var(--rouge_fade); */
    width: 100%;
    display: flex;
    align-content: center;
@@ -198,7 +220,7 @@ li {
    pointer-events: auto;
 }
 
-.header > .header-top > div > h1{
+.header>.header-top>div>h1 {
    margin-top: 7%;
    color: var(--text);
    text-shadow: 2px 2px 0px black;
@@ -226,8 +248,8 @@ header {
    align-items: center;
    justify-content: space-between;
    position: fixed;
-   top:0;
-   
+   top: 0;
+   font-family: 'BlenderProBold', sans-serif;
 
 
 }
@@ -268,14 +290,16 @@ header {
 ###################################################*/
 
 main {
+   font-family: 'BlenderProBold', sans-serif;
+   color: var(--text);
    background-image: url("../Picture/BackGround/BG_1.jpg");
    background-size: 100%;
    background-repeat: no-repeat;
-   background-color: var(--jaune);
+   background-color: black;
    height: 1024px;
 }
 
-main  > section{
+main>section {
    background-color: var(--noire_fade_lg);
    border: 3px solid var(--rouge_fade);
    height: 1024px;
@@ -283,11 +307,18 @@ main  > section{
    margin: 0;
 }
 
-main > section > article {
+main>section>article {
+   display:grid ;
+   background-color: var(--noire_fade);
+   border: 3px solid var(--rouge_fade);
+   height: 45%;
+   width: 60%;
+   margin: auto;
+   margin-top: 12%;
+   padding: 5px;
 }
 
-
-
+main>section>article>
 
 
 /*###################################################
@@ -296,12 +327,12 @@ main > section > article {
 #                                                   #
 ###################################################*/
 
-footer > section{
+footer>section {
    background-color: var(--noire_fade_lg);
    border: 3px solid var(--rouge_fade);
    height: 300px;
    width: 100%;
    margin: 0;
-   background-color: var(--jaune);
+   background-color: black;
 
 }
