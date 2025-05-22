@@ -1,29 +1,337 @@
-.mainmenubtn {
-    background-color: skyblue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding:20px;
-    margin-top:20px;
+:root {
+   --background: url("../Picture/BackGround/BG_1.jpg");
+   --font: url('../FONT/BlenderPro-Book.woff') format('woff');
+   --text: #FF4A57;
+   --rouge: #710000;
+   --gris: #272932;
+   --gris_fade: #27293281;
+   --rouge_fade: #FF4A57;
+   --noire_fade: #000000c2;
+   --noire_fade_lg: #0000003a;
+   --jaune: #FDF500;
+   --shadow: #00000040;
 }
-.mainmenubtn:hover {
-    background-color: blue;
-    }
-.dropdown {
-    position: relative;
-    display: inline-block;
+
+/*
+#####################################################
+#                                                   #
+#                      Polices                      #
+#                                                   #
+#####################################################
+*/
+
+@font-face {
+   font-family: 'BlenderPro';
+   src: url('../FONT/BlenderPro-Book.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
 }
-.dropdown-child {
-    display: none;
-    background-color: skyblue;
-    min-width: 200px;
+
+@font-face {
+   font-family: 'BlenderProBold';
+   src: url('../FONT/BlenderPro-Book.woff') format('woff');
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
 }
-.dropdown-child a {
-    color: blue;
-    padding: 20px;
-    text-decoration: none;
-    display: block;
+
+
+
+/*###################################################
+#                                                   #
+#                      BODY                         #
+#                                                   #
+###################################################*/
+
+
+body {
+   font-family: 'BlenderProBold', sans-serif;
+   text-align: justify;
+   color: var(--text);
+   margin: 0;
+   box-sizing: border-box;
+   word-break: break-word;
 }
-.dropdown:hover .dropdown-child {
-    display: block;
+
+
+
+/*###################################################
+#                                                   #
+#                      MENU                         #
+#                                                   #
+###################################################*/
+/*PARENT LISTE*/
+
+ul {
+   display: block;
+   list-style-type: disc;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   padding-inline-start: 40px;
+   unicode-bidi: isolate;
+   color: var(--text);
+
+}
+
+a {
+   color: var(--text);
+}
+
+/*LIST*/
+li {
+   display: list-item;
+   unicode-bidi: isolate;
+   font-size: 15px;
+   justify-content: center;
+   color: var(--text);
+}
+
+.menu-list {
+   align-items: center;
+   background: var(--noire_fade);
+   display: flex;
+   height: 48px;
+   list-style: none;
+   margin: 0;
+   padding: 0 0 0 24px;
+
+}
+
+.menu-item {
+   align-items: center;
+   color: var(--rouge_fade);
+   cursor: pointer;
+   display: flex;
+
+   font-size: 17px;
+   font-style: normal;
+   font-weight: 400;
+   height: 100%;
+   line-height: 110%;
+   padding: 0 25px;
+   position: relative;
+   text-transform: uppercase;
+   text-decoration: none;
+
+
+}
+
+.menu {
+   background-color: var(--gris_fade);
+   display: flex;
+   position: sticky;
+   border: 3px solid var(--rouge_fade);
+   clip-path: polygon(16px 0, 100% 0, 100% 30px, calc(100% - 18px) 48px, calc(100% - 18px) 2000%, 0 2000%, 0 16px);
+   margin-top: 36px;
+   position: relative;
+}
+
+.menu-sub-list {
+   display: none;
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+   background: var(--noire_fade);
+   border: 2px solid var(--rouge_fade);
+   border-top: 8px solid var(--rouge_fade);
+
+   box-shadow: 0 1px 3px var(--shadow), 0 2px 16px var(--shadow);
+   clip-path: inset(0 -16px -16px -16px);
+
+   flex-direction: column;
+   left: 0;
+   list-style: none;
+   margin: 0;
+   min-width: -webkit-fill-available;
+   min-width: -moz-available;
+   padding: 10px 0;
+   position: absolute;
+   top: calc(100% - 4px);
+   text-transform: initial;
+
+
+}
+
+.list-proj>li a:hover,
+.list-perso>li a:hover {
+   text-align: justify;
+   text-decoration: none;
+   color: var(--jaune);
+}
+
+.list-proj>li a,
+.list-perso>li a {
+   text-decoration: none;
+   text-align: justify;
+   color: var(--text);
+}
+
+.list-cv>li a {
+   text-align: center;
+   color: var(--text);
+   text-decoration: none;
+}
+
+.text-cv:hover .list-cv,
+.text-proj:hover .list-proj,
+.text-perso:hover .list-perso {
+   display: flex;
+   align-items: center;
+
+}
+
+.menu-sub-list li {
+   align-items: center;
+   background: #0000;
+   color: #fff;
+   display: flex;
+   height: 44px;
+
+}
+
+.menu-sub-list>li:hover {
+   /* background-color: var(--rouge_fade); */
+   width: 100%;
+   display: flex;
+   align-content: center;
+}
+
+/* *,
+:after,
+:before {
+   box-sizing: inherit;
+   
+   color: var(--rouge_fade);
+   font-family: 'BlenderProBold', sans-serif;
+   text-shadow: 1px 1px 3px var(--shadow);
+
+
+} */
+
+
+/*###################################################
+#                                                   #
+#                   HEADER                          #
+#                                                   #
+###################################################*/
+.header-top>* {
+   pointer-events: auto;
+}
+
+.header>.header-top>div>h1 {
+   margin-top: 7%;
+   color: var(--text);
+   text-shadow: 2px 2px 0px black;
+}
+
+.header-top:before {
+   background: linear-gradient(180deg, #000000a6, #0000);
+   content: "";
+   display: block;
+   left: 0;
+   opacity: 0;
+   pointer-events: none;
+   position: absolute;
+   top: 0;
+   transition: opacity .2s;
+   width: 100%;
+   will-change: opacity;
+}
+
+header {
+   padding: 10px;
+   margin-bottom: 30px;
+   width: 100%;
+   margin-left: 1000;
+   align-items: center;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+   font-family: 'BlenderProBold', sans-serif;
+
+
+}
+
+.header {
+   width: 100%;
+   margin-top: 30px;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0;
+
+   background-position: 50%;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   width: 100%;
+   display: sticky;
+}
+
+
+
+.header-top {
+   align-items: self-start;
+   display: flex;
+   justify-content: space-between;
+   left: 0;
+   padding: 0 40px;
+   position: absolute;
+   right: 0;
+   top: 0;
+   z-index: 10
+}
+
+/*###################################################
+#                                                   #
+#                      MAIN                         #
+#                                                   #
+###################################################*/
+
+main {
+   font-family: 'BlenderProBold', sans-serif;
+   color: var(--text);
+   background-image: url("../Vid/CP2077_UE_KV_Animation_1920x1080_AV1.mp4");
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-color: black;
+   height: 1024px;
+}
+
+main>section {
+   border: 3px solid var(--rouge_fade);
+   height: 1024px;
+   width: 100%;
+   margin: 0;
+}
+
+main>section>article {
+   display:grid ;
+   background-color: var(--noire_fade);
+   border: 3px solid var(--rouge_fade);
+   height: 45%;
+   width: 60%;
+   margin: auto;
+   margin-top: 12%;
+   padding: 5px;
+}
+
+main>section>article>
+
+
+/*###################################################
+#                                                   #
+#                      FOOTER                       #
+#                                                   #
+###################################################*/
+
+footer>section {
+   background-color: var(--noire_fade_lg);
+   border: 3px solid var(--rouge_fade);
+   height: 300px;
+   width: 100%;
+   margin: 0;
+   background-color: black;
+
 }
