@@ -46,6 +46,7 @@
 
 
 body {
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default | url("../Picture/Cursor/Cyberpunk/link.cur"), pointer ;
    font-family: 'BlenderProBold', sans-serif;
    text-align: justify;
    color: var(--text);
@@ -417,9 +418,11 @@ main>section>.A_propos {
    display:flex ;
    background-color: var(--noire_fade);
    border: 3px solid var(--rouge_fade);
-   height: 45%;
-   width: 60%;
+   border-top: 9px solid var(--rouge_fade);
+   height: 60%;
+   width: 45%;
    margin: auto;
+   margin-left: 12%;
    margin-top: -800px;
    overflow:hidden;
    padding: 5px;
