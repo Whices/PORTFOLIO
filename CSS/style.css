@@ -11,7 +11,7 @@
    --jaune: #FDF500;
    --shadow: #00000040;
 }
-
+/*A MODIF : #030303 Couleur de l'element du footer pour correspondre*/
 /*
 #####################################################
 #                                                   #
@@ -51,7 +51,6 @@ body {
    text-align: justify;
    color: var(--text);
    margin: 0;
-   box-sizing: border-box;
    word-break: break-word;
 }
 
@@ -400,12 +399,12 @@ header {
 main {
    font-family: 'BlenderProBold', sans-serif;
    color: var(--text);
-
    background-size: 100%;
    background-repeat: no-repeat;
-   background-color: black;
-   height: 2000px;
+   background-color: #060606;
+   height: 2048px;
    display: grid;
+   box-sizing: border-box;
 }
 
 main>section {
@@ -418,12 +417,10 @@ main>section>.bloc video{
    position: absolute;
    z-index: 0;
    width: 100%;
-   border: 3px solid var(--rouge_fade);
    border-bottom: 0px;
-   overflow:   hidden;
-   box-shadow: 0px 1000px 1px #060606;
+   overflow:hidden;
+   border:none
 }
-
 
 main>section>.A_propos {
    position: relative;
@@ -441,6 +438,23 @@ main>section>.A_propos {
    z-index: 1;
 }
 
+.menu_a_propos{
+   display: flex;
+   height: 30px;
+   width: 100%;
+   border: 3px solid var(--rouge_fade);
+
+}
+button:hover{
+   cursor: url(../Picture/Cursor/Cyberpunk/link.cur), pointer;
+}
+button{
+   cursor: url(../Picture/Cursor/Cyberpunk/link.cur), pointer;
+   align-self: center;
+   background-color: #0000;
+   border: none;
+}
+
 
 /*###################################################
 #                                                   #
@@ -449,14 +463,12 @@ main>section>.A_propos {
 ###################################################*/
 
 footer{
-   position: relative;
-   background-image: url(/Picture/BackGround/img.svg);
-   background-position-y: 0px;
-   z-index: 2;
-   background-repeat: no-repeat;
+   position: absolute;
+   background-image: url(../Picture/BackGround/img.svg);
+   background-position: top;
+   background-repeat: repeat-x;
    height: 500px;
    width: 100%;
    background-color: #FDF500;
-   border: 3px solid var(--rouge_fade);
-   border-top: 0px ;
+
 }
