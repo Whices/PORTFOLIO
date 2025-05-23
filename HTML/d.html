@@ -1,712 +1,220 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="format-detection" content="telephone=no">
-   <title>Tout l&#039;univers de Cyberpunk 2077 — jeux, anime et bien plus</title>
-   <link rel="preload" href="https://www.cyberpunk.net/fonts/BlenderPro-Bold.woff2" as="font" crossorigin>
-   <link rel="preload" href="https://www.cyberpunk.net/fonts/BlenderPro-Book.woff2" as="font" crossorigin>
-   <link rel="stylesheet" href="https://www.cyberpunk.net/build/buy-b-65c8cda99a0e0ab23532.css">
-   <script>
-      window.addEventListener('CookiebotOnDialogDisplay', function (e) {
-         var el = document.getElementById('CybotCookiebotDialogPoweredbyImage');
-         if (el) el.src = 'https://www.cyberpunk.net/build/images/cookies-icon-03723b68.png';
-      }, false);
-   </script>
-   <!-- Anti-flicker snippet (recommended)  -->
-   <style>
-      .async-hide {
-         opacity: 0 !important
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #0f0f0f, #000000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #ff00cc, #3333ff);
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      padding: 1rem 0;
+      border-bottom: 1px solid #0ff;
+    }
+
+    nav a {
+      color: #0ff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff00cc;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .glitch {
+      font-size: 2rem;
+      position: relative;
+      color: #0ff;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #ff00cc; }
+      25% { text-shadow: -2px -2px #3333ff; }
+      50% { text-shadow: 2px -2px #0ff; }
+      75% { text-shadow: -2px 2px #ff00cc; }
+      100% { text-shadow: 2px 2px #3333ff; }
+    }
+
+    .projects img {
+      width: 100%;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+      border: 2px solid #ff00cc;
+      border-radius: 8px;
+    }
+
+    .projects img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .skills {
+      background: #111;
+      padding: 1rem;
+      border: 1px solid #0ff;
+      border-radius: 8px;
+    }
+
+    .skills li {
+      padding: 0.5rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .resume a {
+      display: inline-block;
+      padding: 1rem;
+      border: 2px solid #0ff;
+      color: #0ff;
+      text-decoration: none;
+      border-radius: 5px;
+      background: #111;
+      margin-top: 1rem;
+      box-shadow: 0 0 10px #0ff;
+      transition: 0.3s ease;
+    }
+
+    .resume a:hover {
+      background: #0ff;
+      color: #111;
+      box-shadow: 0 0 20px #ff00cc;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      background: #111;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff00cc;
+    }
+
+    input, textarea {
+      background: #000;
+      border: 1px solid #0ff;
+      padding: 0.75rem;
+      color: #0ff;
+      border-radius: 4px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    input[type="submit"] {
+      background: #0ff;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #ff00cc;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
       }
-   </style>
-   <script>(function (a, s, y, n, c, h, i, d, e) {
-         s.className += ' ' + y; h.start = 1 * new Date;
-         h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
-         (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
-      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
-         { 'GTM-MB323TS': true });</script>
-   <!-- Google Tag Manager -->
-   <script>(function (w, d, s, l, i) {
-         w[l] = w[l] || []; w[l].push({
-            'gtm.start':
-               new Date().getTime(), event: 'gtm.js'
-         }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-MB323TS');</script>
-   <!-- End Google Tag Manager -->
-   <meta name="facebook-domain-verification" content="4vf09b70gyfnjbvvmell4rdtzeycks">
-   <meta name="apple-mobile-web-app-title" content="Tout l&#039;univers de Cyberpunk 2077 — jeux, anime et bien plus">
-   <meta name="application-name" content="Tout l&#039;univers de Cyberpunk 2077 — jeux, anime et bien plus">
-   <meta name="description"
-      content="Découvrez le monde futuriste, mature et sombre de Cyberpunk 2077, un jeu de rôle narratif en monde ouvert développé par CD PROJEKT RED, les créateurs de la saga de jeux The Witcher.">
-   <meta property="og:locale:alternate" content="en_US">
-   <meta property="og:locale:alternate" content="ru_RU">
-   <meta property="og:locale:alternate" content="de_DE">
-   <meta property="og:locale:alternate" content="pl_PL">
-   <meta property="og:locale:alternate" content="en_US">
-   <meta property="og:locale" content="fr_FR">
-   <meta property="og:locale:alternate" content="es_ES">
-   <meta property="og:locale:alternate" content="es_MX">
-   <meta property="og:locale:alternate" content="it_IT">
-   <meta property="og:locale:alternate" content="ja_JP">
-   <meta property="og:locale:alternate" content="ko_KR">
-   <meta property="og:locale:alternate" content="zh_CN">
-   <meta property="og:locale:alternate" content="zh_TW">
-   <meta property="og:locale:alternate" content="cs_CZ">
-   <meta property="og:locale:alternate" content="hu_HU">
-   <meta property="og:locale:alternate" content="ar_AR">
-   <meta property="og:locale:alternate" content="th_TH">
-   <meta property="og:locale:alternate" content="tr_TR">
-   <meta property="og:locale:alternate" content="en_US">
-   <meta property="og:type" content="website">
-   <meta property="og:title" content="Tout l&#039;univers de Cyberpunk 2077 — jeux, anime et bien plus">
-   <meta property="og:description"
-      content="Découvrez le monde futuriste, mature et sombre de Cyberpunk 2077, un jeu de rôle narratif en monde ouvert développé par CD PROJEKT RED, les créateurs de la saga de jeux The Witcher.">
-   <meta property="og:site_name" content="Tout l&#039;univers de Cyberpunk 2077 — jeux, anime et bien plus">
-   <meta property="og:image" content="https://www.cyberpunk.net/build/images/social-thumbnail-en-ddcf4d23.jpg">
-   <meta property="og:url" content="https://www.cyberpunk.net/us/fr/buy">
-
-   <link rel="canonical" href="https://www.cyberpunk.net/us/fr/buy">
-
-   <link rel="apple-touch-icon" sizes="57x57" href="https://www.cyberpunk.net/favicons/apple-icon-57x57.png">
-   <link rel="apple-touch-icon" sizes="60x60" href="https://www.cyberpunk.net/favicons/apple-icon-60x60.png">
-   <link rel="apple-touch-icon" sizes="72x72" href="https://www.cyberpunk.net/favicons/apple-icon-72x72.png">
-   <link rel="apple-touch-icon" sizes="76x76" href="https://www.cyberpunk.net/favicons/apple-icon-76x76.png">
-   <link rel="apple-touch-icon" sizes="114x114" href="https://www.cyberpunk.net/favicons/apple-icon-114x114.png">
-   <link rel="apple-touch-icon" sizes="120x120" href="https://www.cyberpunk.net/favicons/apple-icon-120x120.png">
-   <link rel="apple-touch-icon" sizes="144x144" href="https://www.cyberpunk.net/favicons/apple-icon-144x144.png">
-   <link rel="apple-touch-icon" sizes="152x152" href="https://www.cyberpunk.net/favicons/apple-icon-152x152.png">
-   <link rel="apple-touch-icon" sizes="180x180" href="https://www.cyberpunk.net/favicons/apple-icon-180x180.png">
-   <link rel="icon" type="image/png" sizes="192x192" href="https://www.cyberpunk.net/favicons/android-icon-192x192.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="https://www.cyberpunk.net/favicons/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="96x96" href="https://www.cyberpunk.net/favicons/favicon-96x96.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="https://www.cyberpunk.net/favicons/favicon-16x16.png">
-   <link rel="manifest" href="https://www.cyberpunk.net/favicons/manifest.json">
-
-   <link rel="shortcut icon" href="https://www.cyberpunk.net/favicons/favicon.ico">
-
-   <meta name="msapplication-TileColor" content="#ffffff">
-   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-   <meta name="msapplication-config" content="https://www.cyberpunk.net/favicons/browserconfig.xml">
-   <meta name="theme-color" content="#000000">
-   <script>
-      var isMobile = (typeof isMobile === 'undefined') ? (/mobile/i.test(navigator.userAgent) && ('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch))) : isMobile;
-   </script>
+    }
+  </style>
 </head>
+<body>
+  <header>
+    <h1 class="glitch">Cyberpunk Portfolio</h1>
+  </header>
 
-<body class="">
-   <!-- Google Tag Manager (noscript) -->
-   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB323TS" height="0" width="0"
-         style="display:none;visibility:hidden"></iframe></noscript>
-   <!-- End Google Tag Manager (noscript) -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-   <header class="header">
-      <div class="header-top">
-         <a href="/us/fr/">
-         </a>
-         <div class="menu">
-            <ul class="menu-list">
-               <li class="menu-item">
-                  <span class="menu-sub">Jeux</span>
-                  <ul class="menu-sub-list">
-                     <li><a href="/us/fr/cyberpunk-2077">Cyberpunk 2077</a></li>
-                     <li><a href="/us/fr/phantom-liberty">Phantom Liberty</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item">
-                  <span class="menu-sub">Séries</span>
-                  <ul class="menu-sub-list">
-                     <li><a href="/fr/edgerunners">Edgerunners</a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="menu-item">
-                  <span class="menu-sub">Communauté</span>
-                  <ul class="menu-sub-list">
-                     <li>
-                        <a href="https://forums.cdprojektred.com/index.php?forums/cyberpunk.21/">Forums</a>
-                     </li>
-                     <li>
-                        <a href="https://discord.gg/cyberpunkgame">Discord</a>
-                     </li>
-                     <li>
-                        <a href="/fr/cosplay-guides">GUIDES DU COSPLAY</a>
-                     </li>
-                     <li>
-                        <a href="/fr/build-planner">Planificateur de build</a>
-                     </li>
-                     <li>
-                        <a
-                           href="https://www.cyberpunk.net/en/news/49789/cyberpunk-2077-ultimate-edition-game-booklet-out-now">Livret
-                           de jeu</a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="menu-item menu-item-more">
-                  <span class="menu-sub">Plus</span>
-                  <ul class="menu-sub-list">
-                     <li>
-                        <a href="/us/fr/update-2.2">Mise à jour 2.2</a>
-                     </li>
-                     <li>
-                        <a href="/fr/myrewards">MES RÉCOMPENSES</a>
-                     </li>
-                     <li>
-                        <a href="https://gear.cdprojektred.com">Marchandise</a>
-                     </li>
-                     <li><a href="/us/fr/cyberpunk-2077#media">Médias</a></li>
-                     <li><a href="https://support.cdprojektred.com">Assistance</a>
-                     </li>
-                     <li>
-                        <a href="https://www.cdprojektred.com">CD PROJEKT RED</a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="menu-item menu-item-lang">
-                  <span class="menu-sub">fr</span>
-                  <ul class="menu-sub-list">
-                     <li><a href="/us/en/buy" class="" hreflang="en">English</a></li>
-                     <li><a href="/us/ru/buy" class="" hreflang="ru">Русский</a></li>
-                     <li><a href="/us/de/buy" class="" hreflang="de">Deutsch</a></li>
-                     <li><a href="/us/pl/buy" class="" hreflang="pl">Polski</a></li>
-                     <li><a href="/us/pt-br/buy" class="" hreflang="pt-br">Português (BR)</a></li>
-                     <li><a href="/us/fr/buy" class="active" hreflang="fr">Français</a></li>
-                     <li><a href="/us/es/buy" class="" hreflang="es">Español</a></li>
-                     <li><a href="/us/es-mx/buy" class="" hreflang="es-mx">Español (MX)</a></li>
-                     <li><a href="/us/it/buy" class="" hreflang="it">Italiano</a></li>
-                     <li><a href="/us/ja/buy" class="" hreflang="ja">日本語</a></li>
-                     <li><a href="/us/ko/buy" class="" hreflang="ko">한국어</a></li>
-                     <li><a href="/us/zh-cn/buy" class="" hreflang="zh-cn">简体中文</a></li>
-                     <li><a href="/us/zh-tw/buy" class="" hreflang="zh-tw">繁體中文</a></li>
-                     <li><a href="/us/cs/buy" class="" hreflang="cs">čeština</a></li>
-                     <li><a href="/us/hu/buy" class="" hreflang="hu">Magyar</a></li>
-                     <li><a href="/us/ar/buy" class="" hreflang="ar">العربية</a></li>
-                  </ul>
-               </li>
-            </ul>
-         </div>
-         <div class="menu-toggle">
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
-         <div class="menu-close">
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
-      </div>
-   </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a cutting-edge [Your Field] with a passion for the future. From neon-lit code to dystopian-inspired design, I bring cyberpunk dreams to digital life.</p>
+  </section>
 
-   <section class="wrapper buy-version-b standard" data-current-product="bundle">
-      <div class="info info-b">
-         <div class="info__box">
-            <div class="step__title">
-               <div class="step__title-box">
-                  <h4> sélectionner jeu:</h4>
-               </div>
-            </div>
-            <div class="boxes game--boxes" id="productButton">
-               <div class="game__container gameStandard">
-                  <div class="select__game-box " data-product="standard">
-                     <img src="/build/images/pre-order/buy-b/keyart-standard-fr-0b37d851.jpg" alt="cyberpunk 2077" />
-                     <div class="box__layer"></div>
-                     <div class="box__border">
-                        <div class="box__border--inner">
-                           <span class="box__border--top"></span>
-                           <span class="box__border--right"></span>
-                           <span class="box__border--bottom"></span>
-                           <span class="box__border--left"></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="game__container gamePhantomLiberty">
-                  <div class="select__game-box " data-product="ep1">
-                     <img src="/build/images/pre-order/buy-b/keyart-ep1-ph-lib-fr@1x-28e8f35d.jpg"
-                        srcset="/build/images/pre-order/buy-b/keyart-ep1-ph-lib-fr@1x-28e8f35d.jpg 1x, /build/images/pre-order/buy-b/keyart-ep1-ph-lib-fr@2x-8f53253f.jpg 2x"
-                        }}>
-                     <div class="box__layer"></div>
-                     <div class="box__border">
-                        <div class="box__border--inner">
-                           <span class="box__border--top"></span>
-                           <span class="box__border--right"></span>
-                           <span class="box__border--bottom"></span>
-                           <span class="box__border--left"></span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="expansionValidation">Cyberpunk 2077 est requis pour jouer à Phantom Liberty</div>
-               </div>
-               <div class="game__container gameBundle">
-                  <div class="select__game-box  box--active " data-product="bundle">
-                     <img src="/build/images/pre-order/buy-b/keyart-ue-fr@2x-cd66fd0d.jpg"
-                        srcset="/build/images/pre-order/buy-b/keyart-ue-fr@2x-cd66fd0d.jpg 1x, /build/images/pre-order/buy-b/keyart-ue-fr@2x-cd66fd0d.jpg 2x">
-                     <div class="box__layer"></div>
-                     <div class="box__border">
-                        <div class="box__border--inner">
-                           <span class="box__border--top"></span>
-                           <span class="box__border--right"></span>
-                           <span class="box__border--bottom"></span>
-                           <span class="box__border--left"></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div>
+      <h3>Neon Grid</h3>
+      <img src="project1.jpg" alt="Project 1">
+      <p>A synthwave interface for immersive experiences.</p>
+    </div>
+    <div>
+      <h3>Glitch Reality</h3>
+      <img src="project2.jpg" alt="Project 2">
+      <p>A VR-ready platform with pixel-perfect precision.</p>
+    </div>
+  </section>
 
+  <section id="skills" class="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>Cybernetic HTML/CSS</li>
+      <li>Glitch JavaScript</li>
+      <li>Synthwave UI/UX</li>
+      <li>Neural Git Systems</li>
+    </ul>
+  </section>
 
-            <div class="info__box games">
-            </div>
-            <div class="info__box platform ">
+  <section class="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download>Download Datachip (Resume)</a>
+  </section>
 
-               <div class="step__title">
-                  <div class="step__title-box ">
-                     <h4>
-                        SÉLECTIONNEZ LA PLATEFORME:
-                     </h4>
-                     <span class="step__title-detail"></span>
-                  </div>
-               </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Alias" required>
+      <input type="email" name="email" placeholder="Neon-Mail" required>
+      <textarea name="message" rows="5" placeholder="Your Transmission..." required></textarea>
+      <input type="submit" value="Upload Message">
+    </form>
+  </section>
 
-
-               <div class="boxes boxes--triple    boxes--five ">
-                  <div class="box box--warning">
-                     <p class="box__title"></p>
-                  </div>
-                  <div class="future-consoles">
-                     <p>Inclut la mise à jour next-gen gratuite pour Xbox Series X|S et PS5 bientôt disponible</p>
-                  </div>
-               </div>
-
-            </div>
-
-            <div class="info__box shop hide">
-               <div class="step__title">
-                  <div class="step__title-box">
-                     <h4>SÉLECTIONNEZ LA VERSION ET LE MAGASIN:</h4>
-                     <h4 class="step__title-box--pc">Sélectionner<br />
-                        Magasin et version PC</h4>
-                     <h4 class="step__title-box--xbox">Sélectionner<br />
-                        Magasin et version Xbox</h4>
-                     <h4 class="step__title-box--ps4">Sélectionner<br />
-                        Magasin et version PS4</h4>
-                     <span class="step__title-detail"></span>
-                  </div>
-               </div>
-               <div class="boxes boxes--triple boxes--grow">
-                  <div class="store-button-container">
-                     <button type="button" class="box box--digital box--active" data-type="digital">
-                        <span class="box__title">Numérique</span>
-                     </button>
-                     <button type="button" class="box box--retail " data-type="retail">
-                        <span class="box__title">Physique</span>
-                        <span class="coming-soon">Prochainement<span class="coming-soon--left"></span><span
-                              class="coming-soon--right"></span></span>
-                     </button>
-                  </div>
-                  <div class="box box--warning">
-                     <p class="box__title"></p>
-                  </div>
-               </div>
-
-
-               <div class="boxes__container">
-                  <div class="boxes  boxes--stores "></div>
-               </div>
-               <nav class="pagination-container">
-                  <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
-                     &lt;
-                  </button>
-                  <div id="pagination-numbers" class="pagination-numbers">
-                  </div>
-                  <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
-                     &gt;
-                  </button>
-               </nav>
-
-               <div class="region__box">
-                  <div class="region">
-                     <p>Changer la région :</p>
-                     <span class="region__country">États-Unis <span class="arrow region__country-arrow">
-                           <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg"
-                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12"
-                              style="enable-background:new 0 0 12 12;" xml:space="preserve">
-                              <style type="text/css">
-                                 .st2 {
-                                    fill-rule: evenodd;
-                                    clip-rule: evenodd;
-                                    fill: #000000;
-                                 }
-                              </style>
-                              <path class="st2" d="M6,12l6-5.8V3.6L7,8.6V0H5v8.5L0,3.6v2.6L6,12z" />
-                           </svg>
-                        </span>
-                     </span>
-                  </div>
-                  <div class="region__layer">
-                     <div class="region__layer__wrapper">
-                        <ul data-title="Changer la région :">
-                           <li data-country='AR'>
-                              <a class="region__layer-item buy" href="/ar/fr/buynow">Argentine</a>
-                           </li>
-                           <li data-country='AU'>
-                              <a class="region__layer-item buy" href="/au/fr/buynow">Australie</a>
-                           </li>
-                           <li data-country='AT'>
-                              <a class="region__layer-item buy" href="/at/fr/buynow">Autriche</a>
-                           </li>
-                           <li data-country='BE'>
-                              <a class="region__layer-item buy" href="/be/fr/buynow">Belgique</a>
-                           </li>
-                           <li data-country='BR'>
-                              <a class="region__layer-item buy" href="/br/fr/buynow">Brésil</a>
-                           </li>
-                           <li data-country='BG'>
-                              <a class="region__layer-item buy" href="/bg/fr/buynow">Bulgarie</a>
-                           </li>
-                           <li data-country='CA'>
-                              <a class="region__layer-item buy" href="/ca/fr/buynow">Canada</a>
-                           </li>
-                           <li data-country='CL'>
-                              <a class="region__layer-item buy" href="/cl/fr/buynow">Chili</a>
-                           </li>
-                           <li data-country='CN'>
-                              <a class="region__layer-item buy" href="/cn/fr/buynow">Chine</a>
-                           </li>
-                           <li data-country='CO'>
-                              <a class="region__layer-item buy" href="/co/fr/buynow">Colombie</a>
-                           </li>
-                           <li data-country='HR'>
-                              <a class="region__layer-item buy" href="/hr/fr/buynow">Croatie</a>
-                           </li>
-                           <li data-country='CZ'>
-                              <a class="region__layer-item buy" href="/cz/fr/buynow">Tchéquie</a>
-                           </li>
-                           <li data-country='CY'>
-                              <a class="region__layer-item buy" href="/cy/fr/buynow">Chypre</a>
-                           </li>
-                           <li data-country='DK'>
-                              <a class="region__layer-item buy" href="/dk/fr/buynow">Danemark</a>
-                           </li>
-                           <li data-country='FI'>
-                              <a class="region__layer-item buy" href="/fi/fr/buynow">Finlande</a>
-                           </li>
-                           <li data-country='FR'>
-                              <a class="region__layer-item buy" href="/fr/fr/buynow">France</a>
-                           </li>
-                           <li data-country='DE'>
-                              <a class="region__layer-item buy" href="/de/fr/buynow">Allemagne</a>
-                           </li>
-                           <li data-country='GR'>
-                              <a class="region__layer-item buy" href="/gr/fr/buynow">Grèce</a>
-                           </li>
-                           <li data-country='HK'>
-                              <a class="region__layer-item buy" href="/hk/fr/buynow">R.A.S. chinoise de Hong Kong</a>
-                           </li>
-                           <li data-country='HU'>
-                              <a class="region__layer-item buy" href="/hu/fr/buynow">Hongrie</a>
-                           </li>
-                           <li data-country='ID'>
-                              <a class="region__layer-item buy" href="/id/fr/buynow">Indonésie</a>
-                           </li>
-                           <li data-country='IE'>
-                              <a class="region__layer-item buy" href="/ie/fr/buynow">Irlande</a>
-                           </li>
-                           <li data-country='IL'>
-                              <a class="region__layer-item buy" href="/il/fr/buynow">Israël</a>
-                           </li>
-                           <li data-country='IN'>
-                              <a class="region__layer-item buy" href="/in/fr/buynow">Inde</a>
-                           </li>
-                           <li data-country='IT'>
-                              <a class="region__layer-item buy" href="/it/fr/buynow">Italie</a>
-                           </li>
-                           <li data-country='JP'>
-                              <a class="region__layer-item buy" href="/jp/fr/buynow">Japon</a>
-                           </li>
-                           <li data-country='LU'>
-                              <a class="region__layer-item buy" href="/lu/fr/buynow">Luxembourg</a>
-                           </li>
-                           <li data-country='MY'>
-                              <a class="region__layer-item buy" href="/my/fr/buynow">Malaisie</a>
-                           </li>
-                           <li data-country='MX'>
-                              <a class="region__layer-item buy" href="/mx/fr/buynow">Mexique</a>
-                           </li>
-                           <li data-country='NL'>
-                              <a class="region__layer-item buy" href="/nl/fr/buynow">Pays-Bas</a>
-                           </li>
-                           <li data-country='NZ'>
-                              <a class="region__layer-item buy" href="/nz/fr/buynow">Nouvelle-Zélande</a>
-                           </li>
-                           <li data-country='NO'>
-                              <a class="region__layer-item buy" href="/no/fr/buynow">Norvège</a>
-                           </li>
-                           <li data-country='PE'>
-                              <a class="region__layer-item buy" href="/pe/fr/buynow">Pérou</a>
-                           </li>
-                           <li data-country='PH'>
-                              <a class="region__layer-item buy" href="/ph/fr/buynow">Philippines</a>
-                           </li>
-                           <li data-country='PL'>
-                              <a class="region__layer-item buy" href="/pl/fr/buynow">Pologne</a>
-                           </li>
-                           <li data-country='PT'>
-                              <a class="region__layer-item buy" href="/pt/fr/buynow">Portugal</a>
-                           </li>
-                           <li data-country='RO'>
-                              <a class="region__layer-item buy" href="/ro/fr/buynow">Roumanie</a>
-                           </li>
-                           <li data-country='RU'>
-                              <a class="region__layer-item buy" href="/ru/fr/buynow">Russie</a>
-                           </li>
-                           <li data-country='RS'>
-                              <a class="region__layer-item buy" href="/rs/fr/buynow">Serbie</a>
-                           </li>
-                           <li data-country='SA'>
-                              <a class="region__layer-item buy" href="/sa/fr/buynow">Arabie saoudite</a>
-                           </li>
-                           <li data-country='SG'>
-                              <a class="region__layer-item buy" href="/sg/fr/buynow">Singapour</a>
-                           </li>
-                           <li data-country='SK'>
-                              <a class="region__layer-item buy" href="/sk/fr/buynow">Slovaquie</a>
-                           </li>
-                           <li data-country='SI'>
-                              <a class="region__layer-item buy" href="/si/fr/buynow">Slovénie</a>
-                           </li>
-                           <li data-country='ZA'>
-                              <a class="region__layer-item buy" href="/za/fr/buynow">Afrique du Sud</a>
-                           </li>
-                           <li data-country='KR'>
-                              <a class="region__layer-item buy" href="/kr/fr/buynow">Corée du Sud</a>
-                           </li>
-                           <li data-country='ES'>
-                              <a class="region__layer-item buy" href="/es/fr/buynow">Espagne</a>
-                           </li>
-                           <li data-country='SE'>
-                              <a class="region__layer-item buy" href="/se/fr/buynow">Suède</a>
-                           </li>
-                           <li data-country='CH'>
-                              <a class="region__layer-item buy" href="/ch/fr/buynow">Suisse</a>
-                           </li>
-                           <li data-country='TH'>
-                              <a class="region__layer-item buy" href="/th/fr/buynow">Thaïlande</a>
-                           </li>
-                           <li data-country='TR'>
-                              <a class="region__layer-item buy" href="/tr/fr/buynow">Turquie</a>
-                           </li>
-                           <li data-country='AE'>
-                              <a class="region__layer-item buy" href="/ae/fr/buynow">Émirats arabes unis</a>
-                           </li>
-                           <li data-country='GB'>
-                              <a class="region__layer-item buy" href="/gb/fr/buynow">Royaume-Uni</a>
-                           </li>
-                           <li data-country='US'>
-                              <a class="region__layer-item buy" href="/us/fr/buynow">États-Unis</a>
-                           </li>
-                        </ul>
-                     </div>
-
-                     <a class="outlined-button" data-color="#00F0FF" data-corner-right-bottom="true"
-                        data-corner-size="18" target="_blank">
-                        Fermer
-                     </a>
-                  </div>
-               </div>
-
-            </div>
-
-         </div>
-      </div>
-   </section>
-
-   <div class="l-newsletter" data-state="form">
-      <h2 class="l-newsletter__title" data-error-title="L&#039;inscription a échoué" data-success-title="Accès autorisé"
-         data-already-title="Déja inscrit(e)">
-         Abonnez-vous à la newsletter officielle de Cyberpunk 2077 !
-      </h2>
-
-      <p class="l-newsletter__text" data-error-text="Veuillez réessayer plus tard."
-         data-success-text="Vous êtes désormais abonné(e) à la newsletter !"
-         data-already-text="Vous vous êtes déjà abonné(e) à la newsletter.">
-         Retrouvez toutes les infos et annonces à propos de l&#039;univers Cyberpunk 2077 sur votre fil
-         d&#039;actualité !
-      </p>
-
-      <form name="newsletter" method="post" action="/fr/signup-newsletter" class="l-newsletter__form"
-         novalidate="novalidate">
-
-         <div>
-            <div class="l-newsletter__input">
-               <span class="l-newsletter__invalid-info">Renseignez une adresse e-mail valide</span>
-               <label for="newsletter_userEmail" class="required">Entrez votre adresse e-mail</label>
-               <input type="email" id="newsletter_userEmail" name="newsletter[userEmail]" required="required"
-                  placeholder="" data-error="newsletter.userEmail.error" tabIndex="1" />
-               <div class="l-newsletter__loading">
-                  <div></div>
-                  <div></div>
-               </div>
-               <div class="l-newsletter__caret"></div>
-            </div>
-            <div class="l-newsletter__captcha">
-               <div id="recaptcha" data-size="invisible" class="g-recaptcha"
-                  data-sitekey="6Lfta6oUAAAAAE5W9wJ12TZ9WBz7gAEANTt3UmoN" data-callback="submitNewsletterForm"
-                  data-theme=“dark”></div>
-            </div>
-            <div class="l-newsletter__checkbox">
-               <div class="c-checkbox"><input type="checkbox" id="newsletter_newsletterAcceptance"
-                     name="newsletter[newsletterAcceptance]" required="required" value="1" />
-                  <i></i>
-               </div>
-               <p>
-                  Je souhaite recevoir l'actualité, les offres spéciales et d'autres informations de CD PROJEKT et j'ai
-                  au moins 17 ans
-                  <br><br><span>CD PROJEKT sera responsable de vos données personnelles. Pour obtenir plus
-                     d'information, veuillez consulter notre <a target="_blank"
-                        href="https://regulations.cdprojektred.com/en/privacy_policy">Politique de confidentialité de CD
-                        PROJEKT</a>.</span>
-                  <br><br>
-                  <span>
-                     Ce site est protégé par reCAPTCHA. La <a target="_blank"
-                        href="https://policies.google.com/privacy">Politique de confidentialité</a> et les <a
-                        target="_blank" href="https://policies.google.com/terms">Conditions d'utilisation</a> de Google
-                     s'appliquent.
-                  </span>
-               </p>
-            </div>
-         </div>
-
-         <div>
-            <button type="submit" id="newsletter_submit" name="newsletter[submit]"
-               disabled="disabled">S&#039;INSCRIRE</button>
-         </div>
-      </form>
-   </div>
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-   <div class="separator"></div>
-
-
-
-
-   <footer class="footer">
-      <div class="content">
-
-         <div class="socials">
-            <span>Retrouvez-nous sur</span>
-
-            <a class="social-youtube" href="https://www.youtube.com/user/CyberPunkGame" target="_blank"></a>
-            <a class="social-facebook" href="http://facebook.com/CyberpunkGameFR" target="_blank"></a>
-            <a class="social-twitter" href="http://twitter.com/cyberpunkgame" target="_blank"></a>
-            <a class="social-forums" href="https://forums.cdprojektred.com/index.php?forums/cyberpunk.10794362/"
-               target="_blank"></a>
-            <a class="social-discord" href="https://discord.gg/cyberpunkgame" target="_blank"></a>
-            <a class="social-instagram" href="https://www.instagram.com/cyberpunkgame/" target="_blank"></a>
-            <a class="social-tumblr" href="https://cyberpunkgame.tumblr.com/" target="_blank"></a>
-            <a class="social-twitch" href="https://www.twitch.tv/cdprojektred" target="_blank"></a>
-         </div>
-
-         <hr>
-
-
-         <div class="partners">
-            <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/nvidia-5a0ab065.svg" alt="">
-            <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/alienware-3d98dd93.svg"
-               alt="">
-            <img loading="lazy" src="https://www.cyberpunk.net/build/images/footer/partners/amd-a823d277.svg" alt="">
-
-            <div class="l-footer__ratings">
-               <div class="l-footer__rating l-footer__rating--rating US"></div>
-            </div>
-         </div>
-
-         <hr>
-
-         <div class="links">
-            <a href="https://regulations.cdprojektred.com/privacy_policy">Conditions d&#039;utilisation et Politique de
-               confidentialité</a>
-            <a href="https://en.cdprojektred.com/jobs/">Offres d&#039;emploi </a>
-            <a href="/fr/user-agreement/">User agreement</a>
-            <a href="https://cdprojektred.com/fan-content">Fan Content Guidelines</a>
-            <a href="#cookie">Déclaration relative aux cookies</a>
-            <a href="/fr/modding-support">REDmod</a>
-
-            <div class="language-selector">
-               <div class="l-footer__langs-bg"></div>
-               <div class="l-footer__langs">
-                  <div><span><i class="icon-world"></i>Français</span></div>
-                  <ul>
-                     <li><a href="/us/en/buy" class="" hreflang="en">English</a></li>
-                     <li><a href="/us/ru/buy" class="" hreflang="ru">Русский</a></li>
-                     <li><a href="/us/de/buy" class="" hreflang="de">Deutsch</a></li>
-                     <li><a href="/us/pl/buy" class="" hreflang="pl">Polski</a></li>
-                     <li><a href="/us/pt-br/buy" class="" hreflang="pt-br">Português (BR)</a></li>
-                     <li><a href="/us/fr/buy" class="active" hreflang="fr">Français</a></li>
-                     <li><a href="/us/es/buy" class="" hreflang="es">Español</a></li>
-                     <li><a href="/us/es-mx/buy" class="" hreflang="es-mx">Español (MX)</a></li>
-                     <li><a href="/us/it/buy" class="" hreflang="it">Italiano</a></li>
-                     <li><a href="/us/ja/buy" class="" hreflang="ja">日本語</a></li>
-                     <li><a href="/us/ko/buy" class="" hreflang="ko">한국어</a></li>
-                     <li><a href="/us/zh-cn/buy" class="" hreflang="zh-cn">简体中文</a></li>
-                     <li><a href="/us/zh-tw/buy" class="" hreflang="zh-tw">繁體中文</a></li>
-                     <li><a href="/us/cs/buy" class="" hreflang="cs">čeština</a></li>
-                     <li><a href="/us/hu/buy" class="" hreflang="hu">Magyar</a></li>
-                     <li><a href="/us/ar/buy" class="" hreflang="ar">العربية</a></li>
-                  </ul>
-               </div>
-            </div>
-
-         </div>
-
-         <hr>
-
-      </div>
-
-      <div class="content">
-         <div class="copyright">
-
-            <a href="https://cdprojektred.com" target="_blank">
-               <img loading="lazy" src="https://www.cyberpunk.net/build/images/CDProjektRed-White-e4ac7847.svg"
-                  alt="CD Projekt Red" />
-            </a>
-
-            <p>© 2025 CD PROJEKT S.A. Tous droits réservés. CD PROJEKT, le logo CD PROJEKT, Cyberpunk, Cyberpunk 2077 et
-               le logo Cyberpunk 2077 sont des marques commerciales et/ou des marques déposées de CD PROJEKT S.A. aux
-               États-Unis et/ou dans d'autres pays.</p>
-
-         </div>
-
-
-         <div class="projects">
-
-            <a href="http://thewitcher.com" target="_blank">
-               <img loading="lazy" src="https://www.cyberpunk.net/build/images/witcher-dbdb7666.png" alt="Witcher" />
-               thewitcher.com
-            </a>
-            <a href="https://www.playgwent.com" target="_blank">
-               <img loading="lazy" src="https://www.cyberpunk.net/build/images/gwent-f7fcd4e6.png" alt="Gwent" />
-               playgwent.com
-            </a>
-            <a href="https://gear.cdprojektred.com/" target="_blank">
-               <img loading="lazy"
-                  src="https://www.cyberpunk.net/build/images/footer/gear-logo/logo-gear_horizontal_white-2e8243c2.svg"
-                  alt="Store" />
-               gear.cdprojektred.com
-            </a>
-         </div>
-      </div>
-
-   </footer>
-
-
-   <script src="https://www.cyberpunk.net/build/runtime-3daaba2cea85efd480fe.js" defer></script>
-   <script src="https://www.cyberpunk.net/build/4692-63b482db512adce1f371.js" defer></script>
-   <script src="https://www.cyberpunk.net/build/4069-adb20758a8142ff091a1.js" defer></script>
-   <script src="https://www.cyberpunk.net/build/buy-b-a32d31e3672a2c537077.js" defer></script>
+  <footer>
+    <p>&copy; 2025 NeonDreams. All rights reserved.</p>
+  </footer>
 </body>
-
 </html>

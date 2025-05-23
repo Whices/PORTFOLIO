@@ -401,26 +401,29 @@ main>section {
    height: 1024px;
    width: 100%;
    margin: 0;
-
 } 
+
 main>section>.bloc video{
    position: absolute;
    z-index: 0;
    width: 100%;
    border: 3px solid var(--rouge_fade);
+   border-bottom: 0px;
 }
 
 
 main>section>.A_propos {
+   position: relative;
    display:flex ;
    background-color: var(--noire_fade);
    border: 3px solid var(--rouge_fade);
    height: 45%;
    width: 60%;
    margin: auto;
-
+   margin-top: -800px;
+   overflow:hidden;
    padding: 5px;
-   z-index: 3;
+   z-index: 1;
 }
 
 
