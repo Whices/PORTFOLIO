@@ -46,7 +46,7 @@
 
 
 body {
-   cursor: [[ url("../Picture/Cursor/Cyberpunk/arrow.cur"), default ] | [url("../Picture/Cursor/Cyberpunk/link.cur"), pointer ]] ;
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
    font-family: 'BlenderProBold', sans-serif;
    text-align: justify;
    color: var(--text);
@@ -55,6 +55,12 @@ body {
    word-break: break-word;
 }
 
+/*POUR LES CURSEUR*/
+
+P,
+h1{
+   cursor: url("../Picture/Cursor/Cyberpunk/beam.cur"), default;
+}
 
 
 /*###################################################
@@ -74,11 +80,13 @@ ul {
    padding-inline-start: 40px;
    unicode-bidi: isolate;
    color: var(--text);
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
 
 }
 
 a {
    color: var(--text);
+   cursor: url("../Picture/Cursor/Cyberpunk/link.cur"),pointer;
 }
 
 /*LIST*/
@@ -88,6 +96,7 @@ li {
    font-size: 15px;
    justify-content: center;
    color: var(--text);
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
 }
 
 .menu-list {
@@ -98,7 +107,7 @@ li {
    list-style: none;
    margin: 0;
    padding: 0 0 0 24px;
-
+   
 }
 
 .menu-item {
@@ -116,6 +125,7 @@ li {
    position: relative;
    text-transform: uppercase;
    text-decoration: none;
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
 
 
 }
@@ -257,7 +267,7 @@ header {
    font-family: 'BlenderProBold', sans-serif;
    /*POUR LA VIDEO BACKGROUND (Pas d'alternative pour le moment ff*/
    z-index: 10;
-
+   cursor: url(../Picture/Cursor/Cyberpunk/arrow.cur), auto;
 
 }
 
@@ -394,7 +404,7 @@ main {
    background-size: 100%;
    background-repeat: no-repeat;
    background-color: black;
-   height: 1024px;
+   height: 2000px;
    display: grid;
 }
 
@@ -410,6 +420,8 @@ main>section>.bloc video{
    width: 100%;
    border: 3px solid var(--rouge_fade);
    border-bottom: 0px;
+   overflow:   hidden;
+   box-shadow: 0px 1000px 1px #060606;
 }
 
 
@@ -430,9 +442,21 @@ main>section>.A_propos {
 }
 
 
-
 /*###################################################
 #                                                   #
 #                      FOOTER                       #
 #                                                   #
 ###################################################*/
+
+footer{
+   position: relative;
+   background-image: url(/Picture/BackGround/img.svg);
+   background-position-y: 0px;
+   z-index: 2;
+   background-repeat: no-repeat;
+   height: 500px;
+   width: 100%;
+   background-color: #FDF500;
+   border: 3px solid var(--rouge_fade);
+   border-top: 0px ;
+}
