@@ -46,7 +46,7 @@
 
 
 body {
-   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default | url("../Picture/Cursor/Cyberpunk/link.cur"), pointer ;
+   cursor: [[ url("../Picture/Cursor/Cyberpunk/arrow.cur"), default ] | [url("../Picture/Cursor/Cyberpunk/link.cur"), pointer ]] ;
    font-family: 'BlenderProBold', sans-serif;
    text-align: justify;
    color: var(--text);
