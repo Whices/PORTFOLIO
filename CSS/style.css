@@ -176,7 +176,8 @@ li {
 
 .list-cv>li a:hover {
    text-decoration: none;
-   color: var(--jaune);
+   color: #7fd6ff;
+   text-shadow: 1px 1px 2px white;
 
 }
 
@@ -450,6 +451,12 @@ main>section>.A_propos {
    padding: 5px;
    z-index: 1;
 }
+@media (max-width: 1600px){
+
+   main>section>.A_propos {
+      height: 50%;
+   }
+}
 
 .menu_a_propos {
    display: flex;
@@ -529,10 +536,12 @@ input:checked+label .tab-content {
    box-sizing: border-box;
    height: 30px;
    width: 100px;
+   cursor: url(../Picture/Cursor/Cyberpunk/link.cur), pointer;
    transition: 0.25s;
    display: flex;
    justify-content: center;
    align-items: center
+   
 }
 
 .tab-content {
@@ -549,6 +558,7 @@ input:checked+label .tab-content {
    width: 90%;
    margin-left: -100px;
    overflow-y: auto;
+   cursor: url(../Picture/Cursor/Cyberpunk/arrow.cur), default;
 }
 
 .tab-content h1 {
