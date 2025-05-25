@@ -170,7 +170,8 @@ li {
 .list-perso>li a:hover {
    text-align: justify;
    text-decoration: none;
-   color: var(--jaune);
+   color: #7fd6ff;
+   text-shadow: 1px 1px 2px white;
 }
 
 .list-cv>li a:hover {
@@ -216,17 +217,11 @@ li {
    align-content: center;
 }
 
-/* *,
-:after,
-:before {
-   box-sizing: inherit;
-   
-   color: var(--rouge_fade);
-   font-family: 'BlenderProBold', sans-serif;
-   text-shadow: 1px 1px 3px var(--shadow);
+.menu_projet > div {
+   border: 3px solid var(--rouge_fade);
+   margin-right: 50px;
 
-
-} */
+}
 
 
 /*###################################################
@@ -582,7 +577,18 @@ input:checked+label .tab-content {
    font-size: 20px;
 }
 
-
+.tab-2{
+   margin-left: -200px;
+}
+.tab-3{
+   margin-left: -300px;
+}
+.tab-4{
+   margin-left: -400px;
+}
+.tab-5{
+   margin-left: -500px;
+}
 
 /*###################################################
 #               Boutton Projet                      #
