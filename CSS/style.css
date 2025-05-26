@@ -605,6 +605,9 @@ input:checked+label .tab-content {
 .tab-5 {
    margin-left: -500px;
 }
+.tab-6 {
+   margin-left: -600px;
+}
 
 /*###################################################
 #               Boutton Projet                      #
@@ -647,7 +650,7 @@ footer {
    background-image: url(../Picture/BackGround/img.svg);
    background-position: top;
    background-repeat: repeat-x;
-   height: 500px;
+   height: 17em;
    width: 100%;
    background-color: #FDF500;
    padding: 0;
@@ -915,7 +918,12 @@ footer>figcaption {
       grid-column: 1 / -1;
 
    }
-
+   main{
+      height: auto;
+   }
+   footer{
+      height: 27em;
+   }
    .tab-content figcaption {
       grid-column: none;
       display: flex;
@@ -941,21 +949,26 @@ footer>figcaption {
    .tab-2,
    .tab-3,
    .tab-4,
-   .tab-5 {
+   .tab-5,
+   .tab-6 {
       margin-left: 0px;
    }
+   .tab-1{
+      margin-top: 190px;
+   }
    .tab-2{
-      margin-top: 110px;
+      margin-top: 150px;
    }
    .tab-3{
-      margin-top: 80px;
+      margin-top: 110px;
    }
    .tab-4{
-      margin-top: 40px;
+      margin-top: 70px;
    }
    .tab-5{
-      margin-top: 0px;
+      margin-top: 30px;
    }
-
-   
+   .tab-6{
+      margin-top: -10px;
+   }
 }
