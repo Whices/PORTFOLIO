@@ -8,7 +8,7 @@
    --rouge_fade: #FF4A57;
    --noire_fade: #000000c2;
    --noire_fade_lg: #0000003a;
-   --jaune: #fff839;
+   --jaune: #fcf41b;
    --jaune_fade: #fdf500ad;
    --shadow: #00000040;
    --blue_el: #7fd6ff;
@@ -62,8 +62,16 @@ body {
 P,
 h1 {
    cursor: url("../Picture/Cursor/Cyberpunk/beam.cur"), default;
+
+}
+h1{
+   font-family: url('../FONT/BlenderPro-Book.woff') format('woff');;
+   font-size: 40px;
 }
 
+p{
+   font-size: 22px;
+}
 
 /*###################################################
 #                                                   #
@@ -460,13 +468,14 @@ main>section>.A_propos {
    z-index: 1;
 }
 
-
 .menu_a_propos {
    display: flex;
    height: 30px;
    width: 100%;
    border: 3px solid var(--rouge_fade);
-
+}
+.titre_props{
+   font-size: 164px;
 }
 
 /*###################################################
