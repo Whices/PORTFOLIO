@@ -1003,3 +1003,8 @@ body{
 .tab-content{
    color: yellow;
 }
+.DDDD{
+   cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
+   text-decoration: none;
+   color: yellow;
+}
