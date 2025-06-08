@@ -8,7 +8,7 @@
    --rouge_fade: #FF4A57;
    --noire_fade: #000000c2;
    --noire_fade_lg: #0000003a;
-   --jaune: #fcf41b;
+   --jaune: yellow;
    --jaune_fade: #fdf500ad;
    --shadow: #00000040;
    --blue_el: #7fd6ff;
@@ -998,4 +998,8 @@ body{
    .tab-6{
       margin-top: -10px;
    }
+}
+
+.tab-content{
+   color: yellow;
 }
