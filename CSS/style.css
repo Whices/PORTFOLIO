@@ -12,6 +12,7 @@
    --jaune_fade: #fdf500ad;
    --shadow: #00000040;
    --blue_el: #7fd6ff;
+   --vousmelesavezceluila: #ff0055;
 }
 
 /*A MODIF : #030303 Couleur de l'element du footer pour correspondre*/
@@ -64,12 +65,14 @@ h1 {
    cursor: url("../Picture/Cursor/Cyberpunk/beam.cur"), default;
 
 }
-h1{
-   font-family: url('../FONT/BlenderPro-Book.woff') format('woff');;
+
+h1 {
+   font-family: url('../FONT/BlenderPro-Book.woff') format('woff');
+   ;
    font-size: 40px;
 }
 
-p{
+p {
    font-size: 22px;
 }
 
@@ -231,6 +234,11 @@ li {
    border: 3px solid var(--rouge_fade);
    margin-right: 50px;
 
+}
+
+.menu_a_propos>div {
+   border: 3px solid var(--rouge_fade);
+   margin-right: 50px;
 }
 
 
@@ -429,6 +437,10 @@ main {
    box-sizing: border-box;
 }
 
+* {
+   box-sizing: border-box;
+}
+
 main>section {
    height: 1024px;
    width: 100%;
@@ -474,7 +486,8 @@ main>section>.A_propos {
    width: 100%;
    border: 3px solid var(--rouge_fade);
 }
-.titre_props{
+
+.titre_props {
    font-size: 164px;
 }
 
@@ -521,6 +534,16 @@ main>section>.Projet {
    height: 50px;
    width: 100%;
    border: 3px solid var(--rouge_fade);
+}
+
+.menu_a_propos {
+   display: flex;
+   height: 50px;
+   width: 100%;
+   border: 3px solid var(--rouge_fade);
+   display: flex;
+   align-items: center;
+   padding: 0.5rem;
 }
 
 input {
@@ -599,7 +622,19 @@ input:checked+label .tab-content {
    font-size: 20px;
 }
 
-.tab-2 {
+.tab-01,
+.tab-02 {
+   display: flex;
+   flex-direction: column;
+   color: var(--rouge_fade);
+}
+
+.propos {
+   color: var(--rouge_fade);
+}
+
+.tab-2,
+.tab-02 {
    margin-left: -200px;
 }
 
@@ -614,6 +649,7 @@ input:checked+label .tab-content {
 .tab-5 {
    margin-left: -500px;
 }
+
 .tab-6 {
    margin-left: -600px;
 }
@@ -666,25 +702,29 @@ footer {
    padding: 0;
 
 }
+
 Footer p a,
-footer div a 
-{
+footer div a {
    color: black;
 }
-footer p{
+
+footer p {
    color: var(--text);
    font-size: 20px;
 }
-footer .glitch{
+
+footer .glitch {
    font-size: 25px;
 }
 
 footer>section {
    margin-top: 150px;
 }
-.ppppp{
+
+.ppppp {
    color: black;
 }
+
 footer {
    text-align: center;
    margin-bottom: 0;
@@ -709,7 +749,7 @@ footer>figcaption {
    background-repeat: repeat-x;
 }
 
-body{
+body {
    background-color: var(--jaune);
 }
 
@@ -897,14 +937,17 @@ body{
       display: none;
       border: none
    }
+
    input {
       display: none;
    }
+
    input:checked+label .tab-name {
       background-color: #4fc3f7;
       scale: 1.07;
       color: var(--jaune);
    }
+
    input:checked+label .tab-content {
       opacity: 1;
       z-index: 1;
@@ -945,12 +988,15 @@ body{
       grid-column: 1 / -1;
 
    }
-   main{
+
+   main {
       height: auto;
    }
-   footer{
+
+   footer {
       height: 27em;
    }
+
    .tab-content figcaption {
       grid-column: none;
       display: flex;
@@ -980,31 +1026,86 @@ body{
    .tab-6 {
       margin-left: 0px;
    }
-   .tab-1{
+
+   .tab-1 {
       margin-top: 190px;
    }
-   .tab-2{
+
+   .tab-2 {
       margin-top: 150px;
    }
-   .tab-3{
+
+   .tab-3 {
       margin-top: 110px;
    }
-   .tab-4{
+
+   .tab-4 {
       margin-top: 70px;
    }
-   .tab-5{
+
+   .tab-5 {
       margin-top: 30px;
    }
-   .tab-6{
+
+   .tab-6 {
       margin-top: -10px;
    }
 }
 
-.tab-content{
+
+.tab-content {
    color: yellow;
 }
-.DDDD{
+
+.DDDD {
    cursor: url("../Picture/Cursor/Cyberpunk/arrow.cur"), default;
    text-decoration: none;
-   color: yellow;
+   color: var(--jaune_fade);
+}
+
+body::-webkit-scrollbar {
+   width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+   background: #222;
+   border: 2px solid var(--rouge_fade);
+   box-sizing: border-box;
+   border-radius: 30px;
+}
+
+body::-webkit-scrollbar-thumb {
+   background-color: var(--rouge_fade);
+   border-radius: 20px;
+
+}
+
+body {
+   background-color: #222;
+}
+
+
+
+
+.scroll-label::-webkit-scrollbar {
+   width: 8px;
+}
+
+.scroll-label::-webkit-scrollbar-track {
+   background: #222;
+   border-radius: 20px;
+   border: 1px solid;
+   border-color: none;
+}
+
+.scroll-label::-webkit-scrollbar-thumb {
+   background-color: var(--rouge_fade);
+   border-radius: 20px;
+   border: 2px solid #222;
+}
+
+/* Firefox Support */
+.scroll-label {
+   scrollbar-width: thin;
+   scrollbar-color: var(--rouge_fade) #222;
 }
